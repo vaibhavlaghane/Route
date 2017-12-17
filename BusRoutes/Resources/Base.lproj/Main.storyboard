@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mM6-wZ-6bP">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Routes-->
+        <scene sceneID="mYD-1k-E3o">
+            <objects>
+                <tableViewController id="pu1-Nc-dtx" customClass="RoutesTableViewController" customModule="BusRoutes" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="xwm-Q8-VVs">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="routeCell" rowHeight="60" id="yhA-eM-SfS" customClass="RouteCell" customModule="BusRoutes" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="320" height="60"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yhA-eM-SfS" id="c8E-r8-aUC">
+                                    <rect key="frame" x="0.0" y="0.0" width="286" height="59.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="aiga_bus.png" translatesAutoresizingMaskIntoConstraints="NO" id="dCg-yl-qZ3">
+                                            <rect key="frame" x="10" y="0.0" width="60" height="60"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Shb-Jn-3VY">
+                                            <rect key="frame" x="78" y="20" width="226" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="imageBus" destination="dCg-yl-qZ3" id="62E-mJ-iWP"/>
+                                    <outlet property="labelRoute" destination="Shb-Jn-3VY" id="jRk-BX-Ghw"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="pu1-Nc-dtx" id="PHb-Wo-avo"/>
+                            <outlet property="delegate" destination="pu1-Nc-dtx" id="5BE-mw-vzH"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Routes" id="Oaw-w6-wMD"/>
+                    <connections>
+                        <segue destination="oKb-UK-5G4" kind="show" identifier="showCollectionView" id="mF3-AE-0vu"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QrD-92-t3P" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="678.75" y="-127.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="r0P-9J-D9G">
+            <objects>
+                <navigationController id="mM6-wZ-6bP" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Fqv-5J-Crj">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="pu1-Nc-dtx" kind="relationship" relationship="rootViewController" id="JY1-xQ-YGI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WgO-FR-mST" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-81" y="-127"/>
+        </scene>
+        <!--Route-->
+        <scene sceneID="pdb-cs-Coj">
+            <objects>
+                <viewController title="Route" id="oKb-UK-5G4" customClass="RouteCollectionViewController" customModule="BusRoutes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vgX-Bv-qQq">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="glm-fF-uEQ" userLabel="CollectionView">
+                                <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewLayout key="collectionViewLayout" id="duD-0B-Yo6" customClass="CustomCollectionViewLayout" customModule="BusRoutes" customModuleProvider="target"/>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="oKb-UK-5G4" id="QvU-bd-qzb"/>
+                                    <outlet property="delegate" destination="oKb-UK-5G4" id="rlD-Sb-Ixx"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="glm-fF-uEQ" firstAttribute="trailing" secondItem="3Z9-uC-8EW" secondAttribute="trailing" id="2Om-it-3Iq"/>
+                            <constraint firstItem="glm-fF-uEQ" firstAttribute="bottom" secondItem="3Z9-uC-8EW" secondAttribute="bottom" id="Fc1-db-w74"/>
+                            <constraint firstItem="glm-fF-uEQ" firstAttribute="leading" secondItem="3Z9-uC-8EW" secondAttribute="leading" id="dhE-ya-5WD"/>
+                            <constraint firstItem="glm-fF-uEQ" firstAttribute="top" secondItem="3Z9-uC-8EW" secondAttribute="top" id="pr8-ow-5yr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3Z9-uC-8EW"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="glm-fF-uEQ" id="hOV-Gh-ZoU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T3Y-17-vuC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1393" y="-127"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="aiga_bus.png" width="417" height="512"/>
+    </resources>
+</document>
