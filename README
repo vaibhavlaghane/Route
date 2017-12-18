@@ -1,0 +1,29 @@
+# BusRoutes
+
+The Project connects to the API endpoint to download the json list of routes along with details.
+The project supports portrait/landscape mode for devices -  iPhone 4s onwards.
+The list route titles with bus image is diplayed on the 1st view and the details of the routes along with image are shown in the next pane.
+The initial viewcontroller shows data in UITableViewController
+The next set of views are CollectionViewController with custom layout for various size classes.
+They can be swiped to go to next/previous screen.
+
+The project can be opened by double clicking on the file - BusRoutes.xcodeproj
+Unit tests have been added in folder - BusRoutesTests
+
+Project Layout -
+Model group - contains model for route which along with other details has path to image file of the bus
+Network group - contains the network related activies for json download/imagedownload/networkmanager
+Resources group - contains main.storyboard, assets, info.plist
+Utility group - with utility class for utility methods and   ConstantsGlobal file for constants. and loadingview class for showing loading indicator
+Viewcontroller group - contains the files for collection view controller, it's cell, customlayout for collectionview.
+
+***since the API endpoint is http and not https, arbitraryloads have been allowed in the info.plist file for the project***
+
+Results achieved per the requirements :
+Screen 1:
+Routes App shows a list of buses routes
+Screen 2 :
+When user taps in one of the items in the list, it should open the route’s details.
+In the details screen, the user  has the ability to view next/previous route by swiping left/right
+
+

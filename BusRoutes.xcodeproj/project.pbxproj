@@ -79,6 +79,7 @@
 		64E8B0321FE58B2F000FB96D /* aiga_bus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aiga_bus.png; sourceTree = "<group>"; };
 		64E8B0331FE58B2F000FB96D /* line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = line.png; sourceTree = "<group>"; };
 		64E8B0381FE6D230000FB96D /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		DCA48DFD1FE7944400AFFF78 /* README */ = {isa = PBXFileReference; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +110,7 @@
 		64CBB8D81FE4D5C40081285E = {
 			isa = PBXGroup;
 			children = (
+				DCA48DFD1FE7944400AFFF78 /* README */,
 				64CBB8E31FE4D5C40081285E /* BusRoutes */,
 				64CBB8F81FE4D5C40081285E /* BusRoutesTests */,
 				64CBB9031FE4D5C40081285E /* BusRoutesUITests */,
