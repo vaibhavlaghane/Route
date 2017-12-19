@@ -10,7 +10,7 @@ import UIKit
 
 class LoadingView: UIView {
 
-    var spinner = UIActivityIndicatorView()
+    private var spinner = UIActivityIndicatorView()
     
     /*
     // Only override draw() if you perform custom drawing.

@@ -18,7 +18,7 @@ enum ImageDownLoadState:String  {
 
 class Route: NSObject {
 
-    var routeId: String?{
+  internal  var routeId: String?{
         didSet{
             if( routeId != nil ){
                 let path: String = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
@@ -27,16 +27,16 @@ class Route: NSObject {
             }
         }
     }
-    var stopName: String?
-    var shortDescription: String? 
-    var isAccessible: Bool?
+    internal  var stopName: String?
+     internal  var shortDescription: String?
+     internal var isAccessible: Bool?
   
-    var stopsList: Array<String>?
-    var imageData: UIImage?
-    var isImageDownloaded: ImageDownLoadState = .New 
+     internal  var stopsList: Array<String>?
+     internal var imageData: UIImage?
+     internal  var isImageDownloaded: ImageDownLoadState = .New
     
-    var imageURL: URL? = nil 
-    var imagelink: String?{
+     internal  var imageURL: URL? = nil
+     internal   var imagelink: String?{
         didSet{
             if( imagelink != nil ){
                 imageURL = URL.init(string: imagelink!)
@@ -44,7 +44,7 @@ class Route: NSObject {
         }
     }
     
-    var imageFileURL: URL? = nil
+     internal private(set)  var imageFileURL: URL? = nil
     
      init(routeId: String?,
           stopName: String?,

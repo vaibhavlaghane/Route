@@ -12,11 +12,11 @@ let kRouteCellIdentifier = "routeCell"
 
 class RoutesTableViewController: UITableViewController {
 
-    var routeList = [Route]()
-    var netOp = NetworkOperationManager()
+    internal  var routeList = [Route]()
+    internal var netOp = NetworkOperationManager()
     
-    var flagHideLoadingView         = true
-    var loadingView:LoadingView     = LoadingView()
+   private var flagHideLoadingView         = true
+   private var loadingView:LoadingView     = LoadingView()
     
     override func viewDidLoad() {
         super.viewDidLoad()

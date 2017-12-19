@@ -12,13 +12,13 @@ private let kReuseIdentifier = "routeCollectionViewCell"
 
 class RouteCollectionViewController: UIViewController {
 
-    var routesList = [Route ]()
-    var route :Route? = nil
-    var currentIndex =  0
-    var selfViewWidth: CGFloat = 0
-    var cellWidth: CGFloat = 0
-    var cellHeight: CGFloat = 0
-    var initialIndex = false
+      var routesList = [Route ]()
+      var route :Route? = nil
+    private var currentIndex =  0
+    private var selfViewWidth: CGFloat = 0
+    private var cellWidth: CGFloat = 0
+    private var cellHeight: CGFloat = 0
+    private var initialIndex = false
     
     @IBOutlet weak var collectionView: UICollectionView!
  

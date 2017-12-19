@@ -21,9 +21,9 @@ class PendingOperations {
 /// network operations manager class
 class NetworkOperationManager: NSObject {
     
-    let downloader = DataDownloader()
-    var routes = [Route]()
-    let pendingOperations = PendingOperations()
+    internal let downloader = DataDownloader()
+    internal var routes = [Route]()
+    private let pendingOperations = PendingOperations()
     
     /// download JSON data for given page and size
     ///

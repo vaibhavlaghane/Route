@@ -17,7 +17,7 @@ class Utility: NSObject {
     
         guard let jsonArr   = arry  else{return [] }
         if jsonArr.count == 0 { return [] }
-        var routes = [Route]()
+         var routes = [Route]()
         
         for (_,element) in jsonArr.enumerated(){
             

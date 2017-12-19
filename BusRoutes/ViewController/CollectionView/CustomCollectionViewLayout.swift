@@ -10,13 +10,13 @@ import UIKit
 
 class CustomCollectionViewLayout: UICollectionViewLayout {
 
-    var  numberOfColumns =  1
+    private  var  numberOfColumns =  1
     
-    var itemAttributes = [[UICollectionViewLayoutAttributes]]()
-    var itemsSize = [CGSize]()
-    var contentSize: CGSize = .zero
+    private var itemAttributes = [[UICollectionViewLayoutAttributes]]()
+    private var itemsSize = [CGSize]()
+    private var contentSize: CGSize = .zero
     
-    var containerCollectionView: UIView? = nil
+    private var containerCollectionView: UIView? = nil
     
     override func prepare() {
         guard let collectionView = collectionView else {

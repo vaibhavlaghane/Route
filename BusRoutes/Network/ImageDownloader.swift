@@ -13,8 +13,8 @@ import UIKit
 /// NSoperation to download image 
 class ImageDownloader: Operation {
     
-    var  route: Route
-    var  imageData: Data? = nil
+    private var  route: Route
+    private var  imageData: Data? = nil
     
     init(route : Route) {
         self.route = route 

@@ -16,8 +16,8 @@ class RouteCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var accessibilityImage: UIImageView!
     @IBOutlet weak var routeListView: UIScrollView!
     
-    var stopsList:  [String]?
-    var route:Route?{
+    private var stopsList:  [String]?
+     var route:Route?{
         
         didSet{
             
